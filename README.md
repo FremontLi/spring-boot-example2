@@ -1,7 +1,7 @@
-## spring-boot-example2 文件说明
+# spring-boot-example2 说明
 使用SpringBoot+Mybatis，通过user_Id实现跨表关系的查询<br>
-## 数据库两张表内容如下
-# 新闻类
+# 数据库两张表内容如下
+## 新闻类
 sci_news表：<br>
   `id` varchar(32) NOT NULL  COMMENT '新闻ID',<br>
   `title` varchar(255) NOT NULL  COMMENT '新闻标题',<br>
@@ -16,7 +16,7 @@ sci_news表：<br>
   `update_by` varchar(24) NOT NULL  COMMENT '更新操作人',<br>
   PRIMARY KEY (`id`), <br>
   UNIQUE KEY `news_title_index` (`title`)<br>
-# 用户类
+## 用户类
 sys_user表：<br>
 `id` varchar(32) NOT NULL  COMMENT '用户ID<br>
 `nickname` varchar(255) NOT NULL  COMMENT '昵称',<br>
