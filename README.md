@@ -37,6 +37,7 @@ sci_news新闻表：<br>
   `update_by` varchar(24) NOT NULL  COMMENT '更新操作人',<br>
   PRIMARY KEY (`id`), <br>
   UNIQUE KEY `news_title_index` (`title`)<br>
+<br>
 sys_user用户表：<br>
 `id` varchar(32) NOT NULL  COMMENT '用户ID<br>
 `nickname` varchar(255) NOT NULL  COMMENT '昵称',<br>
