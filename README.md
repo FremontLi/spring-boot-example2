@@ -1,8 +1,29 @@
 # spring-boot-example2 说明
 使用SpringBoot+Mybatis，通过user_Id实现跨表关系的查询<br>
-# 数据库两张表内容如下
-## 新闻类
-sci_news表：<br>
+## 新闻类Sci_News
+private String id;<br>
+private String title;<br>
+private String type;<br>
+private String user_id;<br>
+private String link;<br>
+private String cover;<br>
+private Integer downloads;<br>
+private Timestamp gmt_create;<br>
+private String create_by;<br>
+private Timestamp gmt_update;<br>
+private String update_by;<br>
+private Sys_User user;//增加一个user属性<br>
+## 用户类Sys_User
+private String id;<br>
+private String nickname;<br>
+private String phone;<br>
+private String email;<br>
+private String password;<br>
+private String salt;<br>
+private Timestamp gmt_create;<br>
+private Timestamp gmt_update;<br>
+## 数据库两张表内容如下
+sci_news新闻表：<br>
   `id` varchar(32) NOT NULL  COMMENT '新闻ID',<br>
   `title` varchar(255) NOT NULL  COMMENT '新闻标题',<br>
   `type` varchar(24) NOT NULL  COMMENT '新闻类型',<br>
@@ -16,8 +37,7 @@ sci_news表：<br>
   `update_by` varchar(24) NOT NULL  COMMENT '更新操作人',<br>
   PRIMARY KEY (`id`), <br>
   UNIQUE KEY `news_title_index` (`title`)<br>
-## 用户类
-sys_user表：<br>
+sys_user用户表：<br>
 `id` varchar(32) NOT NULL  COMMENT '用户ID<br>
 `nickname` varchar(255) NOT NULL  COMMENT '昵称',<br>
 `phone` varchar(32) NOT NULL  COMMENT '手机号',<br>
