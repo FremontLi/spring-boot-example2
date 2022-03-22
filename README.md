@@ -1,6 +1,6 @@
 # spring-boot-example2 说明
 使用SpringBoot+Mybatis，通过user_Id实现跨表关系的查询<br>
-<code>
+～～～
     <!--关系映射设置-->
     <resultMap id="map01" type="com.spring.boot.example.springbootmybatis.dao.Sci_News">
         <id property="id" column="id"/>
@@ -20,7 +20,7 @@
             <result property="phone" column="phone"/>
         </association>
     </resultMap>
-<code>
+～～～
 ## 新闻类Sci_News
 private String id;<br>
 private String title;<br>
