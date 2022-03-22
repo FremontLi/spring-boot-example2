@@ -1,26 +1,6 @@
 # spring-boot-example2 说明
 使用SpringBoot+Mybatis，通过user_Id实现跨表关系的查询<br>
-～～～
-    <!--关系映射设置-->
-    <resultMap id="map01" type="com.spring.boot.example.springbootmybatis.dao.Sci_News">
-        <id property="id" column="id"/>
-        <result property="title" column="title"/>
-        <result property="type" column="type"/>
-        <result property="user_id" column="user_id"/>
-        <result property="link" column="cover"/>
-        <result property="downloads" column="downloads"/>
-        <result property="gmt_create" column="gmt_create"/>
-        <result property="create_by" column="create_by"/>
-        <result property="gmt_update" column="gmt_update"/>
-        <result property="update_by" column="update_by"/>
-        <association property="user" javaType="com.spring.boot.example.springbootmybatis.dao.Sys_User">
-            <id property="id" column="id"/>
-            <result property="nickname" column="nickname"/>
-            <result property="email" column="email"/>
-            <result property="phone" column="phone"/>
-        </association>
-    </resultMap>
-～～～
+相对于example项目来说，example2在Sci_NewsMapper.xml中进行了关系映射的设置，并且在Sci_News实体类中增加一个user属性以便访问Sys_User类<br>
 ## 新闻类Sci_News
 private String id;<br>
 private String title;<br>
